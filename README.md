@@ -22,7 +22,7 @@ The (key -> note) mappings are currently (WARNING: THIS CHANGES FAST AT THE MOME
 Octaves may be selected using the number keys. The octave may be temporarily raised by holding down `SHIFT` and reduced by holding down `CTRL`.
 
 ## Building Instructions
-After cloning the repository, run npm install (you need Node.js installed).
+After cloning the repository, run `npm install` (you need Node.js installed).
 
 You can then serve up the page with either `npm start` or `node server.js`.
 
