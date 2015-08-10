@@ -17,6 +17,8 @@ The (key -> note) mappings are currently (WARNING: THIS CHANGES FAST AT THE MOME
   * I -> A# / Bb
   * L -> B
 
+Octaves may be selected using the number keys. The octave may be temporarily raised by holding down `SHIFT` and reduced by holding down `CTRL`.
+
 ## Building Instructions
 After cloning the repository, run npm install (you need Node.js installed).
 
