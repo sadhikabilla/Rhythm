@@ -3,6 +3,8 @@
 ## Usage
 Head over to http://128.199.141.170:8888/ and play the piano!
 
+You need to have a browser that supports WebGL and Web Audio API. Any modern release of Firefox or Chrome should work.
+
 The (key -> note) mappings are currently (WARNING: THIS CHANGES FAST AT THE MOMENT)
   * A -> C
   * W -> C# / Db
