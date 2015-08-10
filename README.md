@@ -24,4 +24,6 @@ Octaves may be selected using the number keys. The octave may be temporarily rai
 ## Building Instructions
 After cloning the repository, run npm install (you need Node.js installed).
 
-Then `cd` into `midi/` and run `./compile` before `cd`-ing back and serving up the page with either `npm start` or `node server.js`.
+You can then serve up the page with either `npm start` or `node server.js`.
+
+If you wish to modify the code, please note that any changes made to the MIDI subsystem requires a recompilation of the subsystem sources. Please `npm install -g browserify`, `cd midi/` and run `./compile`. This will regenerate `bundle.js`.
