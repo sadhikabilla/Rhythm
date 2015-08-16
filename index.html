@@ -99,19 +99,21 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
               'Thanks for logging in, ' + response.name + '!';
           });
         }
+        
+        function authenticate_and_switch() {
+          FB.login(function(response) {
+            if (response.authResponse) {
+              console.log('Welcome!  Fetching your information.... ');
+              FB.api('/me', function(response) {
+                console.log('Good to see you, ' + response.name + '.');
+              });
+            } else {
+              console.log('User cancelled login or did not fully authorize.');
+            }
+            checkLoginState();
+          });
+        }
       </script>
-
-      <!--
-        Below we include the Login Button social plugin. This button uses
-        the JavaScript SDK to present a graphical Login button that triggers
-        the FB.login() function when clicked.
-      -->
-
-      <fb:login-button scope="public_profile,email" onlogin="">
-      </fb:login-button>
-
-      <div id="status">
-      </div>
 
         <div class="templatemo-top-menu">
             <div class="container">
@@ -148,7 +150,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                                 <h1>WELCOME TO RHYTHM</h1>
                                 <P>MAKING   MUSIC,   MADE   EASY</p>
                                 <p>
-                                	<a class="btn btn-lg btn-orange" onclick="checkLoginState();" role="button">Get Started</a></p>
+                                	<a class="btn btn-lg btn-orange" onclick="authenticate_and_switch();" role="button">Login and Get Started!</a></p>
                             </div>
                         </div>
                     </div>
