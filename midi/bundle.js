@@ -52,7 +52,7 @@ $("document").ready(function(){
             note_status[String(keycode)][1] = true;
             note_status[String(keycode)][2] = current_octave; // avoids key release bugs
             pressKey(note);
-            piano.playNote(util.note_to_MIDInum(note), 127);
+            piano.keyOn(util.note_to_MIDInum(note), 127);
 
           } else if (keycode == 16) { // shift
             current_octave++;
@@ -70,6 +70,7 @@ $("document").ready(function(){
             note_status[String(keycode)][1] = false;
             var note = (keycode != 59) ? note_status[String(keycode)][0] + String(note_status[String(keycode)][2]) : "C" + String(1 + note_status[String(keycode)][2]);
             releaseKey(note);
+            piano.keyOff(util.note_to_MIDInum(note), 127);
           } else if (keycode == 16) {
             current_octave--;
           } else if (keycode == 17) {
