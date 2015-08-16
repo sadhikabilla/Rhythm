@@ -42,15 +42,14 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
           if (response.status === 'connected') {
             // Logged into your app and Facebook.
             testAPI();
+            document.location.href = "http://128.199.141.170:8888/piano.html";
           } else if (response.status === 'not_authorized') {
             // The person is logged into Facebook, but not your app.
-            document.getElementById('status').innerHTML = 'Please log ' +
-              'into this app.';
+            alert("You need to log in to access this page.");
           } else {
             // The person is not logged into Facebook, so we're not sure if
             // they are logged into this app or not.
-            document.getElementById('status').innerHTML = 'Please log ' +
-              'into Facebook.';
+            alert("You need to log in to access this page");
           }
         }
 
@@ -117,7 +116,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
         the FB.login() function when clicked.
       -->
 
-      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+      <fb:login-button scope="public_profile,email" onlogin="">
       </fb:login-button>
 
       <div id="status">
@@ -158,7 +157,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                                 <h1>WELCOME TO RHYTHM</h1>
                                 <P>MAKING   MUSIC,   MADE   EASY</p>
                                 <p>
-                                	<a class="btn btn-lg btn-orange" href="piano.html" role="button">Get Started</a></p>
+                                	<a class="btn btn-lg btn-orange" onclick="checkLoginState();" role="button">Get Started</a></p>
                             </div>
                         </div>
                     </div>
