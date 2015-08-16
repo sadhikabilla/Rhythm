@@ -43,13 +43,8 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
             // Logged into your app and Facebook.
             testAPI();
             document.location.href = "http://128.199.141.170:8888/piano.html";
-          } else if (response.status === 'not_authorized') {
-            // The person is logged into Facebook, but not your app.
-            alert("You need to log in to access this page.");
           } else {
-            // The person is not logged into Facebook, so we're not sure if
-            // they are logged into this app or not.
-            alert("You need to log in to access this page");
+            console.log("You are not logged in.");
           }
         }
 
